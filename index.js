@@ -25,24 +25,24 @@ app.use('/profilePic',ex.static('profilePic'))
 
 
 
-//  mongoose=require("mongoose");
+mongoose=require("mongoose");
 
-// mongoose.connect("mongodb://localhost:27017/project",
-//     function(){
-//         console.log("mongodb id connected");
-//     }
-// );
+mongoose.connect("mongodb://localhost:27017/project",
+    function(){
+        console.log("mongodb id connected");
+    }
+);
 
-const  ServerApiVersion = require('mongodb');
+// const  ServerApiVersion = require('mongodb');
 
 
-mongoose.connect("mongodb+srv://amanyddv:<password>@cluster0.3bawqzz.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 })
-    .then( () => {
-        console.log('Connected to the database ')
-    })
-    .catch( (err) => {
-        console.error(`Error connecting to the database. n${err}`);
-    })
+// mongoose.connect("mongodb+srv://amanyddv:<password>@cluster0.3bawqzz.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 })
+//     .then( () => {
+//         console.log('Connected to the database ')
+//     })
+//     .catch( (err) => {
+//         console.error(`Error connecting to the database. n${err}`);
+//     })
 
 
 profileSchema=mongoose.Schema({name:{type:String},email:{type:String},password:{type:String},profile:{type:String}});
